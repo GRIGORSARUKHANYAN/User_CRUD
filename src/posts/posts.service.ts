@@ -73,7 +73,7 @@ export class PostsService {
     return post;
   }
 
-  async updateById(id, userUpdate) {
+  async updateById(id, postupdateDto) {
     const valid = mongoose.Types.ObjectId.isValid(id);
     if (!valid) {
       throw new HttpException(
@@ -84,15 +84,15 @@ export class PostsService {
         HttpStatus.BAD_REQUEST,
       );
     }
-    if (userUpdate.userId) {
-      const validUser = await this.usersService.getById(userUpdate.userId);
+    if (postupdateDto.userId) {
+      const validUser = await this.usersService.getById(postupdateDto.userId);
     }
-    const user = await this.postsModel.findByIdAndUpdate(id, userUpdate);
-    if (!user) {
+    const post = await this.postsModel.findByIdAndUpdate(id, postupdateDto);
+    if (!post) {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: 'Invalid user_id',
+          error: 'Invalid post_id',
         },
         HttpStatus.BAD_REQUEST,
       );

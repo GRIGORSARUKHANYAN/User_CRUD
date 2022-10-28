@@ -1,10 +1,11 @@
 ## About the Lab-CMS project
 The project allows you to create a user, update his data, delete the user.
-The user can make posts, update or delete those posts. Write comments under posts, delete and update them. Learn more in the Postman documentation․
+The user can have an album update and delete it.
+The user can make notes, update or delete those notes. Write, delete and update comments under posts. Learn more in the postman documentation.
 
 ## Postman documentation
 open in a browser
-https://documenter.getpostman.com/view/21879356/2s83S3hDoU
+https://documenter.getpostman.com/view/21879356/2s8YK4tTbr
 
 
 ## Description
